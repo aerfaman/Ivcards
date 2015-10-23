@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Template;
 use DB;
+use Auth;
 
 class CreateController extends Controller
 {
@@ -18,6 +19,9 @@ class CreateController extends Controller
      */
     public function index($templateId)
     {
+        if(Auth::guest()){
+            return view('user.login');
+        }
         $template=template::where('name','=',$templateId)->firstOrFail();
         // dd($template);
         if (!$template){

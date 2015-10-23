@@ -54,7 +54,7 @@
   <!--Header-->
   <header id="fullscreen">
     
-      <div class="logo" id="full"><a class="ajax-link" href="index.html">THOMSOON</a></div>
+      <div class="logo" id="full"><a class="ajax-link" href="index.html">我的姓名</a></div>
       
         <div class="menu-index" id="button">
         <i class="fa fa-bars"></i>
@@ -71,8 +71,8 @@
 
         <div class="text-intro" id="site-type">
 
-          <h1>My creative and simplicity modern</h1>
-          <h1 class="typewrite"><span>Portfolio</span></h1> <!--Change on script.js') }}-->
+          <h1>把介绍你的一段话写在这里吧,</h1>
+          <h1 class="typewrite"><span>这里是有特性的字</span></h1> <!--Change on script.js') }}-->
           <p>Please check my portfolio. All project is clean and simplicity modern style. You can buy this template.</p>
 
         </div>
