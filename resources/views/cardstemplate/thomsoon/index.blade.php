@@ -72,7 +72,7 @@
         <div class="text-intro" id="site-type">
 
           <h1>把介绍你的一段话写在这里吧,</h1>
-          <h1 class="typewrite"><span>这里是有特性的字</span></h1> <!--Change on script.js') }}-->
+          <h1 class="typewrite"><span>这里是有特效的字</span></h1> <!--Change on script.js') }}-->
           <p>Please check my portfolio. All project is clean and simplicity modern style. You can buy this template.</p>
 
         </div>

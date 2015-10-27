@@ -22,8 +22,8 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1>Lens</h1>
-						<p>Just another fine responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
+						<h1>你的名称</h1>
+						<p>这是可以填上简介的地方<a href="http://html5up.net">HTML5 UP</a></p>
 						<ul class="icons">
 							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>

@@ -73,6 +73,12 @@
                             <div class="form-group">
                                 <input type="password" name="password" class="form-control" required="required" placeholder="密 码" value="{{ old('password') }}">
                             </div>
+                             <div class="form-group" >
+                                <img src="{{ captcha_src('flat') }}"  alt="captcha" class="">
+                            </div>
+                            <div class="form-group">
+                                 <input type="text" name="captcha" class="form-control">
+                            </div>                            
                             <div class="form-group">
                                 <button type="submit" name="submit" class="btn btn-cmnt"> 登 录 </button>
                             </div>

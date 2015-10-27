@@ -63,6 +63,7 @@ class UserController extends Controller
         $this->validate($request, [
             'email' => 'required|email',
             'password' => 'required|alpha_num|between:6,12',
+            'captcha' => 'required|captcha',
         ]);
         if (Input::get('remember') == 'on')
         {

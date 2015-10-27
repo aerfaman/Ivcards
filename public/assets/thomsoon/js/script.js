@@ -168,7 +168,7 @@ $(document).ready(function(){
 	setTimeout( function(){
 		if($("#site-type").length) {
         $(".typewrite span").typed({
-            strings: ["show case ", "projects "],
+            strings: ["这里是你的特效", "是么,特效"],
             typeSpeed: 100,
             backDelay: 500,
             loop: false,

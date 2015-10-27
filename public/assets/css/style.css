@@ -487,6 +487,7 @@ input[type="checkbox"] {
 
 .header-wrapper {
     padding: 4em 0em;
+    background-image: url(../img/head-img.jpg);
     background-color: rgba(0, 0, 0, 0.77);;
 }
 
