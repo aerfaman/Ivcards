@@ -15,4 +15,5 @@ Route::get('/', 'HomeController@index');
 Route::controller('user', 'people\UserController');
 Route::get('card/create/{templateName}','cards\CreateController@index');
 Route::get('card/template/{templateName}/','cards\CreateController@template');
+Route::get('/captcha/{tmp}','captchaController@captcha');
 

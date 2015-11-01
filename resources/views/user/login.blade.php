@@ -46,16 +46,16 @@
                 	</div>
                 	<div class='col-md-offset-3 col-md-6'>
                 		@if(Session::has('message'))
-                		<div class="alert alert-danger fade in">
+                		<div class="alert alert-success fade in">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                            <h4>Oh snap! You got an error!</h4>
+                            {{-- <h4>Oh snap! You got an error!</h4> --}}
                             <p>{{ Session::get('message')['content'] }}</p>
                         </div>
 					@endif
 					@if (count($errors) > 0)
 					<div class="alert alert-danger fade in">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                            <h4>Oh snap! You got an error!</h4>
+                            {{-- <h4>Oh snap! You got an error!</h4> --}}
                             <ul>
 								@foreach ($errors->all() as $error)
 									<li>{{ $error }}</li>
@@ -74,7 +74,7 @@
                                 <input type="password" name="password" class="form-control" required="required" placeholder="密 码" value="{{ old('password') }}">
                             </div>
                              <div class="form-group" >
-                                <img src="{{ captcha_src('flat') }}"  alt="captcha" class="">
+                                    <img id="captcha" src="{{ captcha_src('flat') }}"  alt="captcha">
                             </div>
                             <div class="form-group">
                                  <input type="text" name="captcha" class="form-control">
@@ -106,8 +106,10 @@
         <!-- smooth-scroll -->
         @yield('js')
         <script>
-        $(function() {  
+        $(function() { 
+
             jQuery.scrollSpeed(100, 1000);
+
         });
         </script>
     </body>

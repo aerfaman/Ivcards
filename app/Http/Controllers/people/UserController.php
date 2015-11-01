@@ -31,14 +31,18 @@ class UserController extends Controller
     {
 
         $rules=[
-            'old_password' => 'required|alpha_num|between:6,18',
-            'password' => 'required|alpha_num|between:6,18|confirmed',
-            'password_confirmation' => 'required|alpha_num|between:6,18',
+            'old_password' => 'required|between:5,18',
+            'password' => 'required|between:6,18|confirmed',
+            // 'password_confirmation' => 'required|between:6,18',
         ];
-        $this->validate($request, $rules);
+        $message=[
+            'required' => ':attribute 必须填写.',
+            'between' => ':attribute 必须大于:min位小于:max位.',
+            'confirmed' => '请输入两次相同密码.',
+        ];
+        $this->validate($request, $rules,$message);
         if(!Hash::check(Input::get('old_password'),Auth::user()->password))
         {
-
             return Redirect::back()->withInput()->withErrors('当前密码不正确!');
         }
         $user=User::find(Auth::user()->id);
@@ -64,16 +68,20 @@ class UserController extends Controller
             'email' => 'required|email',
             'password' => 'required|alpha_num|between:6,12',
             'captcha' => 'required|captcha',
+        ],[
+            'required' => ':attribute 必须填写.',
+            'email' => ':attribute 格式不正确.',
+            'captcha' => ':attribute 输入不正确.',
         ]);
-        if (Input::get('remember') == 'on')
-        {
-            $remember = true;
-        }
-        else
-        {
-            $remember = false;
-        }
-        if (Auth::attempt(['email' => Input::get('email'), 'password' => Input::get('password')], $remember)) {
+        // if (Input::get('remember') == 'on')
+        // {
+        //     $remember = true;
+        // }
+        // else
+        // {
+        //     $remember = false;
+        // }
+        if (Auth::attempt(['email' => Input::get('email'), 'password' => Input::get('password')], true)) {
             // return Redirect::to('people/' . Auth::user()->name);
             return Redirect::to('/');
         } else {
@@ -89,10 +97,16 @@ class UserController extends Controller
         $rules = [
             'username' => 'required|min:2',
             'email' => 'required|email|unique:users',
-            'password' => 'required|alpha_num|between:6,12|confirmed',
-            'password_confirmation' => 'required|alpha_num|between:6,12',
+            'password' => 'required|between:6,12|confirmed',
+            'password_confirmation' => 'required|between:6,12',
         ];
-        $this->validate($request, $rules);
+        $this->validate($request, $rules,[
+            'required' => ':attribute 必须填写.',
+            'unique' => '啊,这个邮箱被注册了,用别的邮箱注册,或者点击忘记密码.',
+            'email' => ':attribute 格式不正确.',
+            'between' => ':attribute 必须大于:min位小于:max位.',
+            'confirmed' => '请输入两次相同密码.',
+        ]);
         $user = new User;
         $user->name = Input::get('username');
         $user->email = Input::get('email');

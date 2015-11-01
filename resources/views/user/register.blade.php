@@ -27,7 +27,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2">
-                                <h1>登录到Ivcards</h1>
+                                <h1>加入Ivcards</h1>
                             </div>
                         </div>
                     </div> <!-- /.container -->
@@ -46,14 +46,14 @@
                         @if(Session::has('message'))
                         <div class="alert alert-danger fade in">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                            <h4>Oh snap! You got an error!</h4>
+                            <h4>注册出错了!!!</h4>
                             <p>{{ Session::get('message')['content'] }}</p>
                         </div>
                     @endif
                     @if (count($errors) > 0)
                     <div class="alert alert-danger fade in">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                            <h4>Oh snap! You got an error!</h4>
+                            <h4>注册出错了!!!</h4>
                             <ul>
                                 @foreach ($errors->all() as $error)
                                     <li>{{ $error }}</li>
@@ -89,6 +89,9 @@
                                 <button id="user_register_submit" type="submit" class="btn btn-cmnt">
                                     注 册
                                 </button>
+                        <div class="form-group">
+                                    <a class='btn btn-link' href="{{ url('/user/login') }}">已经有账号了?</a>
+                            </div>
 
                     </form>
 
