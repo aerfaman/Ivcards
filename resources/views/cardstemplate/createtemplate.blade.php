@@ -49,7 +49,7 @@
                         {{-- <li class="active"><a href="{{ url('/') }}">我的卡片</a></li> --}}
                         <li><a href="#">保 存</a></li>
                        
-                        <li><a href="#">退 出</a></li>
+                        <li><a href="/">退 出</a></li>
                     @endif
                     </ul>
                 </div><!-- end of /.navbar-collapse -->
