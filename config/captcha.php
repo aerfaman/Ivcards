@@ -11,8 +11,8 @@ return [
 
     'flat'   => [
         'length'    => 6,
-        'width'     => 160,
-        'height'    => 46,
+        'width'     => 150,
+        'height'    => 33,
         'quality'   => 90,
         'lines'     => 6,
         'bgImage'   => false,

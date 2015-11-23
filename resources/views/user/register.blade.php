@@ -75,6 +75,10 @@
                                 <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder='邮 箱'>
 
                         </div>
+                {{--  <div class="form-group">
+                                <a class="btn btn-link" href="">发送邮箱验证码</a>
+                                <input type="email"  name="email" value="{{ old('email') }}" placeholder='邮 箱'>
+                        </div> --}}
 
                         <div class="form-group">
                                 <input type="password" class="form-control" name="password" placeholder='密 码'>

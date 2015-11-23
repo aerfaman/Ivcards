@@ -75,10 +75,11 @@
                             </div>
                              <div class="form-group" >
                                     <img id="captcha" src="{{ captcha_src('flat') }}"  alt="captcha">
+                                    <input type="text" name="captcha" placeholder='验证码'>
                             </div>
-                            <div class="form-group">
+                            {{-- <div class="form-group">
                                  <input type="text" name="captcha" class="form-control">
-                            </div>                            
+                            </div> --}}                            
                             <div class="form-group">
                                 <button type="submit" name="submit" class="btn btn-cmnt"> 登 录 </button>
                             </div>
