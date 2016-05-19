@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'aerfaman@163.com', 'name' => 'aerfaman'],
+    'from' => ['address' => 'root@myivcards.com', 'name' => 'aerfaman'],
 
     /*
     |--------------------------------------------------------------------------

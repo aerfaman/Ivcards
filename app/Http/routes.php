@@ -18,7 +18,7 @@ Route::get('/captcha/{tmp}','captchaController@captcha');
 Route::get('/mail',function(){
 	Mail::send('email', ['name'=>'qingye'], function($message)
 	{
-    $message->to('152424228@qq.com', 'aerfaman')->subject('欢迎注册我们的网站，请激活您的账号！');
+    $message->to('aerfaman@163.com', 'aerfaman')->subject('欢迎注册我们的网站，请激活您的账号！');
 	});
 
 });
